@@ -20,7 +20,7 @@ module.exports = {
     const docRef = db().collection('users');
     try {
       // Get token from request header
-      const token = this.req.headers['x-access-token'].split(' ')[1];
+      const token = this.req.headers['Authorization'].split(' ')[1];
       // verifying token
       const decoded = await sails.helpers.verifying(token);
 
