@@ -27,3 +27,12 @@ cd login-api
 npm i
 ```
 
+**3. Run app
+```sh
+sails lift
+```
+and you can run as developer by using nodemon by run this command
+```sh
+nodemon
+```
+
