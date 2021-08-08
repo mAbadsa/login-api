@@ -50,7 +50,22 @@ module.exports.datastores = {
     ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
+    firebaseAdmin() {
+      const admin = require('firebase-admin');
 
+      const serviceAccount =
+        '/home/muhammad/Desktop/login-sys/login-sys/serviceAccountKey.json';
+
+      if (!admin.apps.length) {
+        admin.initializeApp({
+          credential: admin.credential.cert(serviceAccount),
+        });
+      }
+
+      const db = admin.firestore();
+
+      return db;
+    },
   },
 
 
