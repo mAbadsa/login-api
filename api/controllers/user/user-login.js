@@ -45,15 +45,13 @@ module.exports = {
 
     // Check is this user was registerd
     if (!isDocExistByUsername.size) {
-      return exits.invalid();
+      return this.res.status(400).json({
+        success: false,
+        message: 'User not exists',
+      });
     }
 
     let user = {};
-    // const snapshot = await docRef.get();
-    // snapshot.forEach((doc) => {
-    //   console.log({ doc: doc.id });
-    //   user.id = doc.id;
-    // });
 
     // Get user data and add it to the user object
     isDocExistByUsername.forEach((querySnapshot) => {
@@ -104,7 +102,5 @@ module.exports = {
           role: user.role.stringValue
         },
       });
-
-    // return exits.success('User loged in successfully!');
   },
 };

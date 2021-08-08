@@ -22,7 +22,7 @@ module.exports = {
 
   fn: async function ({ password, hashedPassword }) {
     const bcrypt = require('bcrypt');
-    console.log({ password });
+
     const match = await bcrypt.compare(password, hashedPassword);
     return match;
   },

@@ -86,7 +86,6 @@ module.exports = {
 
     // Check if user is already exists by email or username
     if (isDocExistByEmail.size || isDocExistByUsername.size) {
-      // return exits.invalid();
       return this.res.status(409).json({
         statusCode: 409,
         description:

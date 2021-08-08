@@ -16,9 +16,7 @@ module.exports = {
   },
 
   fn: async ({ role }) => {
-    console.log(typeof role);
     if (role !== 'admin' || !role) {
-      console.log('role>>>>', typeof role);
       throw `User role ${role} is not authorized to access this roles`;
     } else {
       return;
