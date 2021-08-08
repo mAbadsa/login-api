@@ -1,0 +1,40 @@
+{
+  "name": "login-api",
+  "private": true,
+  "version": "0.0.0",
+  "description": "User management API by using sails-API framework and firestore to manage NoSQL database.",
+  "keywords": ["login", "api", "sails", "firestore", "intern assignment"],
+  "dependencies": {
+    "@sailshq/connect-redis": "^3.2.1",
+    "@sailshq/lodash": "^3.10.3",
+    "@sailshq/socket.io-redis": "^5.2.0",
+    "bcrypt": "^5.0.1",
+    "firebase-admin": "^9.11.0",
+    "grunt": "1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "sails": "^1.4.4",
+    "sails-hook-grunt": "^4.0.0",
+    "sails-hook-orm": "^3.0.2",
+    "sails-hook-sockets": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "5.16.0",
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/muhammad/login-api.git"
+  },
+  "author": "Muhammad Alabadsa",
+  "license": "",
+  "engines": {
+    "node": "^14.15"
+  }
+}
