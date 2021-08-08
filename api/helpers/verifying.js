@@ -4,6 +4,9 @@ module.exports = {
   description: 'Auth something.',
 
   inputs: {
+    token: {
+      type: 'string',
+    },
   },
 
   exits: {
@@ -12,6 +15,15 @@ module.exports = {
     },
   },
 
-  fn: async function () {
+  fn: async function ({ token }) {
+    const util = require('util');
+    const JWT = require('jsonwebtoken');
+
+    const verifying = util.promisify(JWT.verify);
+
+    let decoded = await verifying(token, sails.config.custom.JWT_SECRET_KEY);
+
+    return decoded;
+    // TODO
   },
 };
