@@ -18,5 +18,7 @@ module.exports.custom = {
   // sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU',
   // stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald',
   // …
-
+  JWT_SECRET_KEY: 'LOGIN_API',
+  JWT_EXPIRE: 60*60*24*30*1000,
+  JWT_COOKIE_EXPIRE: '2d'
 };
