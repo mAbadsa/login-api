@@ -26,8 +26,7 @@ cd login-api
 ```sh
 npm i
 ```
-
-**3. Run app
+**3. Run app:**
 ```sh
 sails lift
 ```
