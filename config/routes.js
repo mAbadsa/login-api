@@ -23,6 +23,7 @@ module.exports.routes = {
   'POST /user/user-login': { action: '/user/user-login'},
   'POST /user/signup': { action: 'user/signup'},
   'GET /user/profile': { action: 'user/profile' },
+  'GET /admin/users': { action: 'admin/users' },
 
 
   /***************************************************************************
