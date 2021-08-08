@@ -29,7 +29,7 @@ module.exports = {
     if (!decoded) {
       this.res
         .status(401)
-        .json({ success: false, message: 'User unthorized!' });
+        .json({ success: false, message: 'User unathorized!' });
     }
 
     // Fetch user from database
@@ -42,7 +42,7 @@ module.exports = {
     // Check if user is exist
     if (!getUserByUsername.size) {
       return this.res
-        .status(401)
+        .status(400)
         .json({ success: true, message: 'User not exists!' });
     }
 

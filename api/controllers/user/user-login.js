@@ -45,7 +45,10 @@ module.exports = {
 
     // Check is this user was registerd
     if (!isDocExistByUsername.size) {
-      return exits.invalid();
+      return this.res.status(400).json({
+        success: false,
+        message: 'User not exists',
+      });
     }
 
     let user = {};
