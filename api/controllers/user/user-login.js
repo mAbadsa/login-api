@@ -57,7 +57,7 @@ module.exports = {
 
     // Get user data and add it to the user object
     isDocExistByUsername.forEach((querySnapshot) => {
-      user = { ...user, ...querySnapshot._fieldsProto };
+      user = { ...user, ...querySnapshot._fieldsProto, id: querySnapshot.id };
     });
 
     // Check if the password is correct
@@ -74,7 +74,7 @@ module.exports = {
 
     // Sign token with user data
     const token = await JWT.sign(
-      { username: user.username.stringValue },
+      { username: user.username.stringValue, userId: user.id },
       sails.config.custom.JWT_SECRET_KEY,
       {
         expiresIn: sails.config.custom.JWT_EXPIRE,
