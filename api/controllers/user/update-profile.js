@@ -60,7 +60,7 @@ module.exports = {
     const db = sails.config.datastores.default.firebaseAdmin;
     const docRef = db().collection('users');
 
-    const token = this.req.headers['Authorization'].split(' ')[1];
+    const token = this.req.headers['authorization'].split(' ')[1];
     const decoded = await sails.helpers.verifying(token);
     console.log(decoded);
     // console.log(docRef.doc(decoded.userId));
