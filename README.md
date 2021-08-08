@@ -1,26 +1,29 @@
 # login-api
 
-a [Sails v1](https://sailsjs.com) application
+Create API to manage user login by useing the [Sails v1](https://sailsjs.com) framework and firestore database [Firestore](https://console.firebase.google.com/u/0/).
+This app is very simple and not professional, this is what you can build by learning a new framework and apply it in two days.
 
+### as a user:
+You can create new user, get your data and update your data.
 
-### Links
+### as a admin
+You can create new user, get your data, update your data and get all users data.
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+## Technologies :computer:
+- sails
+- firestore
 
+## Getting Started 📣
+**1. You can start by cloning the repository on your local machine by running:**
 
-### Version info
+```sh
+git clone https://github.com/GSG-G9/service-seeker.git
+cd login-api
+```
 
-This app was originally generated on Sun Aug 08 2021 11:33:23 GMT+0300 (Israel Daylight Time) using Sails v1.4.4.
+**2. Install all of the dependencies:**
 
-<!-- Internally, Sails used [`sails-generate@2.0.3`](https://github.com/balderdashy/sails-generate/tree/v2.0.3/lib/core-generators/new). -->
-
-
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+```sh
+npm i
+```
 
