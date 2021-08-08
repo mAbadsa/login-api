@@ -26,6 +26,7 @@ module.exports.routes = {
   'POST /user/signup': { action: 'user/signup'},
 
   'GET /user/profile': { action: 'user/profile' },
+  'GET /admin/users': { action: 'admin/users' },
 
   'PATCH /user/update-profile': { action: 'user/update-profile' },
 
