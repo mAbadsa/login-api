@@ -15,12 +15,13 @@ module.exports = {
     },
   },
 
-  fn: async (role) => (req, res, next) => {
-    if (req.user.role !== 'admin' || !role) {
-      return next(
-        `User role ${req.user.role} is not authorized to access this roles`
-      );
+  fn: async ({ role }) => {
+    console.log(typeof role);
+    if (role !== 'admin' || !role) {
+      console.log('role>>>>', typeof role);
+      throw `User role ${role} is not authorized to access this roles`;
+    } else {
+      return;
     }
-    next();
   },
 };
