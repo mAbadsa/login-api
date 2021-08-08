@@ -24,7 +24,6 @@ module.exports = {
     // verifying token
     const decoded = await sails.helpers.verifying(token);
 
-    console.log({ decoded });
     // Check if token is correct
     if (!decoded) {
       this.res
@@ -49,17 +48,8 @@ module.exports = {
     // Put user data into user object
     getUserByUsername.forEach((querySnapshot) => {
       user = querySnapshot._fieldsProto;
-      // console.log(querySnapshot);
     });
 
-    console.log({ user });
-
-
-    // if (this.req.me) {
-    //   throw {redirect: '/'};
-    // }
-
-    // return {};
     // Return success response with user data
     return this.res.status(200).json({
       success: true,

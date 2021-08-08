@@ -55,15 +55,11 @@ module.exports = {
       newEmail = email.toLowerCase();
     }
 
-    console.log({ email, username, age });
-
     const db = sails.config.datastores.default.firebaseAdmin;
     const docRef = db().collection('users');
 
     const token = this.req.headers['authorization'].split(' ')[1];
     const decoded = await sails.helpers.verifying(token);
-    console.log(decoded);
-    // console.log(docRef.doc(decoded.userId));
 
     const userData = await docRef
       .where('username', '==', decoded.username)
@@ -81,10 +77,7 @@ module.exports = {
           querySnapshot._fieldsProto.age.integerValue,
         role: querySnapshot._fieldsProto.role.stringValue,
       };
-      // console.log(querySnapshot);
     });
-
-    console.log({ user });
 
     if (user.username === username || user.email === email) {
       // return exits.invalid();
@@ -102,13 +95,6 @@ module.exports = {
       age: age || user.age,
     });
 
-    // await docRef.doc().update({
-    //   ...user,
-    //   username: user.username.stringValue || username,
-    //   email: user.email.stringValue || email,
-    //   age: user.age.integerValue || age,
-    // });
-
     const userUpdated = await docRef.where('username', '==', username).get();
 
     userUpdated.forEach((querySnapshot) => {
@@ -123,10 +109,7 @@ module.exports = {
           querySnapshot._fieldsProto.age.integerValue,
         role: querySnapshot._fieldsProto.role.stringValue,
       };
-      console.log(user);
     });
-
-    console.log({ user });
 
     const newToken = await JWT.sign(
       { username: user.username, userId: user.id },
