@@ -4,15 +4,11 @@ module.exports = {
   inputs: {
     username: {
       type: 'string',
-      required: true,
-      example: 'asd123',
       description: 'The user name.',
-      unique: true,
     },
     email: {
       type: 'string',
       isEmail: true,
-      unique: true,
       description: 'The email address for the new account, e.g. m@example.com.',
       extendedDescription: 'Must be a valid email address.',
     },
