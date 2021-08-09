@@ -17,8 +17,7 @@ You can create new user, get your data, update your data and get all users data.
 **1. You can start by cloning the repository on your local machine by running:**
 
 ```sh
-git clone https://github.com/GSG-G9/service-seeker.git
-cd login-api
+git clone https://github.com/mAbadsa/login-api.git & cd login-api
 ```
 
 **2. Install all of the dependencies:**
