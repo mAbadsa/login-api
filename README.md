@@ -1,13 +1,13 @@
 # login-api
 
-Create API to manage user login by useing the [Sails v1](https://sailsjs.com) framework and firestore database [Firestore](https://console.firebase.google.com/u/0/).
-This app is very simple and not professional, this is what you can build by learning a new framework and apply it in two days.
+Create API to manage user login by using the [Sails v1](https://sailsjs.com) framework and firestore database [Firestore](https://console.firebase.google.com/u/0/).
+This app is very simple, this is what you can build by learning a new framework and apply it in two days.
 
 ### as a user:
 You can create new user, get your data and update your data.
 
 ### as a admin
-You can create new user, get your data, update your data and get all users data.
+You can create new user, get, update your data and get all users data.
 
 ## Technologies :computer:
 - sails
